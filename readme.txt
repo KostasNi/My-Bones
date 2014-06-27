@@ -1,5 +1,5 @@
 /******************************************************************
-This is my take on the <a href="https://github.com/eddiemachado/bones">Bones starter theme</a>.
+This is my take on the [Bones](https://github.com/eddiemachado/bones) starter theme.
 
 Bones
 A Lightweight Wordpress Development Theme
