@@ -1,14 +1,5 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Base Mobile Stylesheet
-
-Be light and don't over style since everything here will be
-loaded by mobile devices. You want to keep it as minimal as
-possible. This is called at the top of the main stylsheet
-and will be used across all viewports.
-
 ******************************************************************/
 
 /*********************
@@ -320,21 +311,25 @@ POSTS & CONTENT STYLES
 
 			ul, ol, table, dl {}
 
-			ul, ol {
+			ul, ol { margin-left: 1em;
 
 				li {}
 
 			}
 
-			ul {
+			ul { list-style-type: disc;
 
 				li {}
 
 			}
 
-			ol {
+			ol { list-style-type: decimal;
 
-				li {}
+				li {
+					
+					ol { list-style-type: lower-alpha; }
+					
+				}
 
 			}
 
@@ -827,7 +822,7 @@ SIDEBARS & ASIDES
 
 	.widget {
 
-		ul {
+		ul,ol { list-style-type: none;
 
 			li {
 
@@ -865,15 +860,7 @@ FOOTER STYLES
 	color: $light-gray;
 }
 
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
+
 	.footer-links {
 
 		ul {

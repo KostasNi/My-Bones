@@ -1,32 +1,7 @@
 <?php
-/* Welcome to Bones :)
-This is the core Bones file where most of the
-main functions & features reside. If you have
-any custom functions, it's best to put them
-in the functions.php file.
-
-Developed by: Eddie Machado
-URL: http://themble.com/bones/
-
-  - head cleanup (remove rsd, uri links, junk css, ect)
-  - enqueueing scripts & styles
-  - theme support functions
-  - custom menu output & fallbacks
-  - related post function
-  - page-navi function
-  - removing <p> from around images
-  - customizing the post excerpt
-  - custom google+ integration
-  - adding custom fields to user profiles
-
-*/
 
 /*********************
 WP_HEAD GOODNESS
-The default wordpress head is
-a mess. Let's clean it up by
-removing all the junk we don't
-need.
 *********************/
 
 function bones_head_cleanup() {
@@ -56,7 +31,6 @@ function bones_head_cleanup() {
 } /* end bones head cleanup */
 
 // A better title
-// http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
 function rw_title( $title, $sep, $seplocation ) {
   global $page, $paged;
 
@@ -152,11 +126,6 @@ function bones_scripts_and_styles() {
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
-		/*
-		I recommend using a plugin to call jQuery
-		using the google cdn. That way it stays cached
-		and your site will load faster.
-		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
@@ -189,8 +158,6 @@ function bones_theme_support() {
 
 	// rss thingy
 	add_theme_support('automatic-feed-links');
-
-	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 
 	// adding post format support
 	add_theme_support( 'post-formats',

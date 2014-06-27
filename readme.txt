@@ -1,4 +1,6 @@
 /******************************************************************
+This is my take on the <a href="https://github.com/eddiemachado/bones">Bones starter theme</a>.
+
 Bones
 A Lightweight Wordpress Development Theme
 
@@ -13,21 +15,4 @@ http://themble.com/bones
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Are You Serious? Yes.
-
-Special Thanks to:
-Paul Irish & the HTML5 Boilerplate
-Yoast for some WP functions & optimization ideas
-Andrew Rogers for code optimization
-David Dellanave for speed & code optimization
-and several other developers. :)
-
-Submit Bugs & or Fixes:
-https://github.com/eddiemachado/bones/issues
-
-To view Release & Update Notes, read the log.txt file inside
-the library folder.
-
-For more news and to see why my parents constantly ask me what I'm
-doing with my life, follow me on twitter: @eddiemachado
-
 ******************************************************************/

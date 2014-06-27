@@ -1,13 +1,5 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Print Stylesheet
-
-This is the print stylesheet. There's probably not a lot
-of reasons to edit this stylesheet. If you want to
-though, go for it.
-
 ******************************************************************/
 
   * {
@@ -70,7 +62,6 @@ though, go for it.
       page-break-after: avoid;
     }
 
-    // hide content people who print don't need to see
     .sidebar,
     .page-navigation,
     .wp-prev-next,
