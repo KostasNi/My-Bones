@@ -10,7 +10,7 @@
 		<?php // Google Chrome Frame for IE ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php wp_title(''); ?></title>
+		<title><?php wp_title(''); ?></title> 
 
 		<?php // mobile meta ?>
 		<meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<?php // icons & favicons ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
+		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?> /library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
@@ -28,21 +28,21 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+  
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?>> 
 
 		<div id="container">
 
 			<header class="header" role="banner">
-
+ 
 				<div id="inner-header" class="wrap cf">
 
 					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<nav role="navigation">
+ 
+					<nav role="navigation"> 
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container
     					'container_class' => 'menu cf',                 // class of container (should you choose to use it)

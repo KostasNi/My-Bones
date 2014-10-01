@@ -107,9 +107,10 @@ select {
   /* Firefox fix to remove the default arrow */
   -moz-appearance:none;
   text-indent: 0.01px;
-  text-overflow: '';		
+  text-overflow: '';
+  width: 110%;
   /* Firefox fix to vertical align text */
-  line-height: normal; 
+  line-height: normal;
   padding: 5px 0 5px 12px;
 }
 /* IE10+ fix to remove the default arrow */

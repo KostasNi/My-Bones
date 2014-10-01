@@ -1,24 +1,8 @@
-/*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Main Stylesheet
-
-Here's where the magic happens. Here, you'll see we are calling in
-the separate media queries. The base mobile goes outside any query
-and is called at the beginning, after that we call the rest
-of the styles inside media queries.
-
-Helpful articles on Sass file organization:
-http://thesassway.com/advanced/modular-css-naming-conventions
-
 ******************************************************************/
 /*********************
 IMPORTING PARTIALS
-These files are needed at the beginning so that we establish all
-our mixins, functions, and variables that we'll be using across
-the whole project.
 *********************/
 /* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
@@ -489,53 +473,17 @@ span.amp {
 }
 
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Variables
-
-Here is where we declare all our variables like colors, fonts,
-base values, and defaults. We want to make sure this file ONLY
-contains variables that way our files don't get all messy.
-No one likes a mess.
-
 ******************************************************************/
 /*********************
 COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
 *********************/
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Typography
-
-Need to import a font or set of icons for your site? Drop them in
-here or just use this to establish your typographical grid. Or not.
-Do whatever you want to...GOSH!
-
-Helpful Articles:
-http://trentwalton.com/2012/06/19/fluid-type/
-http://ia.net/blog/responsive-typography-the-basics/
-http://alistapart.com/column/responsive-typography-is-a-physical-discipline
-
 ******************************************************************/
 /*********************
-FONT FACE (IN YOUR FACE)
+FONT FACE 
 *********************/
-/*  To embed your own fonts, use this syntax
-  and place your fonts inside the
-  library/fonts folder. For more information
-  on embedding fonts, go to:
-  http://www.fontsquirrel.com/
-  Be sure to remove the comment brackets.
-*/
 /*  @font-face {
       font-family: 'Font Name';
       src: url('library/fonts/font-name.eot');
@@ -546,15 +494,6 @@ FONT FACE (IN YOUR FACE)
       font-weight: normal;
       font-style: normal;
   }
-*/
-/*
-The following is based of Typebase:
-https://github.com/devinhunt/typebase.css
-I've edited it a bit, but it's a nice starting point.
-*/
-/*
- i imported this one in the functions file so bones would look sweet.
- don't forget to remove it for your site.
 */
 /*
 some nice typographical defaults
@@ -579,27 +518,10 @@ p {
 }
 
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Sass Functions
-
-You can do a lot of really cool things in Sass. Functions help you
-make repeated actions a lot easier. They are really similar to mixins,
-but can be used for so much more.
-
-Anyway, keep them all in here so it's easier to find when you're
-looking for one.
-
-For more info on functions, go here:
-http://sass-lang.com/documentation/Sass/Script/Functions.html
-
 ******************************************************************/
 /*********************
 COLOR FUNCTIONS
-These are helpful when you're working
-with shadows and such things. It's essentially
-a quicker way to write RGBA.
 
 Example:
 box-shadow: 0 0 4px black(0.3);
@@ -608,87 +530,23 @@ box-shadow: 0 0 4px rgba(0,0,0,0.3);
 *********************/
 /*********************
 RESPONSIVE HELPER FUNCTION
-If you're creating a responsive site, then
-you've probably already read
-Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
-
-Here's a nice little helper function for calculating
-target / context
-as mentioned in that book.
-
-Example:
-width: cp(650px, 1000px);
-or
-width: calc-percent(650px, 1000px);
-both compile to:
-width: 65%;
 *********************/
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Mixins Stylesheet
-
-This is where you can take advantage of Sass' great features: Mixins.
-I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques gradients.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
-
-Helpful:
-http://sachagreif.com/useful-sass-mixins/
-http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
-http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
-
 ******************************************************************/
 /*********************
 TRANSITION
 *********************/
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include transition(all 0.2s ease-in-out);
-*/
 /*********************
 CSS3 GRADIENTS
-Be careful with these since they can
-really slow down your CSS. Don't overdo it.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 /*********************
 BOX SIZING
 *********************/
 /* @include box-sizing(border-box); */
-/* NOTE: value of "padding-box" is only supported in Gecko. So
-probably best not to use it. I mean, were you going to anyway? */
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Grid Stylesheet
-
-I've seperated the grid so you can swap it out easily. It's
-called at the top the style.scss stylesheet.
-
-There are a ton of grid solutions out there. You should definitely
-experiment with your own. Here are some recommendations:
-
-http://gridsetapp.com - Love this site. Responsive Grids made easy.
-http://susy.oddbird.net/ - Grids using Compass. Very elegant.
-http://gridpak.com/ - Create your own responsive grid.
-https://github.com/dope/lemonade - Neat lightweight grid.
-
-
-The grid below is a custom built thingy I modeled a bit after
-Gridset. It's VERY basic and probably shouldn't be used on
-your client projects. The idea is you learn how to roll your
-own grids. It's better in the long run and allows you full control
-over your project's layout.
-
 ******************************************************************/
 .last-col {
   float: right;
@@ -939,20 +797,9 @@ them however you see fit.
 }
 /*********************
 IMPORTING MODULES
-Modules are reusable blocks or elements we use throughout the project.
-We can break them up as much as we want or just keep them all in one.
-I mean, you can do whatever you want. The world is your oyster. Unless
-you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Alert Styles
-
-If you want to use these alerts in your design, you can. If not,
-you can just remove this stylesheet.
-
 ******************************************************************/
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
@@ -981,28 +828,10 @@ you can just remove this stylesheet.
 }
 
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Button Styles
-
-Buttons are a pretty important part of your site's style, so it's
-important to have a consistent baseline for them. Use this stylesheet
-to create all kinds of buttons.
-
-Helpful Links:
-http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
-
 ******************************************************************/
 /*********************
 BUTTON DEFAULTS
-We're gonna use a placeholder selector here
-so we can use common styles. We then use this
-to load up the defaults in all our buttons.
-
-Here's a quick video to show how it works:
-http://www.youtube.com/watch?v=hwdVpKiJzac
-
 *********************/
 .blue-btn, .comment-reply-link, #submit {
   display: inline-block;
@@ -1029,11 +858,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   top: 1px;
 }
 
-/*
-An example button.
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
 .blue-btn, .comment-reply-link, #submit {
   background-color: #2980b9;
 }
@@ -1045,21 +869,7 @@ and it will create a button dependant on those variables.
 }
 
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Form Styles
-
-We put all the form and button styles in here to setup a consistent
-look. If we need to customize them, we can do this in the main
-stylesheets and just override them. Easy Peasy.
-
-You're gonna see a few data-uri thingies down there. If you're not
-sure what they are, check this link out:
-http://css-tricks.com/data-uris/
-If you want to create your own, use this helpful link:
-http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
-
 ******************************************************************/
 /*********************
 INPUTS
@@ -1335,11 +1145,28 @@ select {
   background-position: 97.5% center;
 }
 
+select {
+  /* Firefox fix to remove the default arrow */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  width: 110%;
+  /* Firefox fix to vertical align text */
+  line-height: normal;
+  padding: 5px 0 5px 12px;
+}
+
+/* IE10+ fix to remove the default arrow */
+select::-ms-expand {
+  display: none;
+}
+
+input[type="submit"] {
+  padding: 6px 0;
+}
+
 /*********************
 BASE (MOBILE) SIZE
-This are the mobile styles. It's what people see on their phones. If
-you set a great foundation, you won't need to add too many styles in
-the other stylesheets. Remember, keep it light: Speed is Important.
 *********************/
 /******************************************************************
 Stylesheet: Base Mobile Stylesheet
@@ -1945,9 +1772,6 @@ FOOTER STYLES
 /* end .footer-links */
 /*********************
 LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
   /******************************************************************
@@ -2033,9 +1857,6 @@ tweeners.
 }
 /*********************
 TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 768px) {
   /******************************************************************
@@ -2193,9 +2014,6 @@ you can add resource intensive styles.
 }
 /*********************
 DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 1030px) {
   /******************************************************************
@@ -2214,25 +2032,17 @@ you can add resource intensive styles.
 }
 /*********************
 LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
   Stylesheet: Super Large Monitor Stylesheet
-  
-  You can add some advanced styles here if you like. This kicks in
-  on larger screens.
-  
   ******************************************************************/
+  body {
+    background: black;
+  }
 }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
 *********************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
@@ -2278,21 +2088,10 @@ query for retina AND a certain size if you want. Go Nuts.
 }
 /*********************
 PRINT STYLESHEET
-Feel free to customize this. Remember to add things that won't make
-sense to print at the bottom. Things like nav, ads, and forms should
-be set to display none.
 *********************/
 @media print {
   /******************************************************************
-  Site Name:
-  Author:
-  
   Stylesheet: Print Stylesheet
-  
-  This is the print stylesheet. There's probably not a lot
-  of reasons to edit this stylesheet. If you want to
-  though, go for it.
-  
   ******************************************************************/
   * {
     background: transparent !important;
@@ -2357,3 +2156,5 @@ be set to display none.
     display: none;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
