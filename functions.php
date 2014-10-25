@@ -15,7 +15,7 @@ function bones_ahoy() {
 
   //Allow editor style.
   add_editor_style();
-	
+
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
   // A better title
