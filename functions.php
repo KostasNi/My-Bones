@@ -1,13 +1,12 @@
 <?php
 
-// LOAD BONES CORE (if you remove this, the theme will break)
+// LOAD THEME'S CORE FUNCTIONS(if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
 
 /*********************
-LAUNCH BONES
 Let's get everything up and running.
 *********************/
 
