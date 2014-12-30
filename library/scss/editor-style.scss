@@ -1,19 +1,7 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: TinyMCE Editor
-
-This stylesheet is loaded automatically by Wordpress when compiled
-and placed in the root theme directory folder as editor-style.css
-
-For more info, check out the codex:
-http://codex.wordpress.org/Editor_Style
-
 ******************************************************************/
 
-/* Wrap the entire post style inside the TinyMCE selector, as suggested
-here http://codex.wordpress.org/Function_Reference/add_editor_style */
 body#tinymce.wp-editor {
 
 	// normalize: http://necolas.github.io/normalize.css/
@@ -38,7 +26,7 @@ body#tinymce.wp-editor {
 	color: $text-color;
   -webkit-font-smoothing: antialiased;
 
-  /*********************
+        /*********************
 	LINK STYLES
 	*********************/
 
@@ -190,9 +178,6 @@ body#tinymce.wp-editor {
 
 		/*********************
 		LARGER MOBILE DEVICES
-		This is for devices like the Galaxy Note or something that's
-		larger than an iPhone but smaller than a tablet. Let's call them
-		tweeners.
 		*********************/
 		@media only screen and (min-width: 481px) {
 
