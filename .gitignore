@@ -52,6 +52,7 @@ tmp/
 .idea/
 temp/
 ._*
+package.json
 .Trashes
 
 .svn
