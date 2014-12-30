@@ -13,7 +13,7 @@ Let's get everything up and running.
 function bones_ahoy() {
 
   //Allow editor style.
-  add_editor_style();
+  add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
