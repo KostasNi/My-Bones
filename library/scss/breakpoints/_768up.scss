@@ -34,6 +34,7 @@ NAVIGATION STYLES
 	ul {
 		background:$black;
 		margin-top:0;
+                overflow: visible;
 	}
 	li {
 		float: left;
@@ -60,6 +61,7 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
+                        width: auto;
 			margin-top: 0;
 			border: 1px solid #ccc;
 			border-top: 0;
@@ -67,14 +69,16 @@ NAVIGATION STYLES
 			visibility: hidden;
 			z-index: 8999;
 
-			li {
+			li { width: 100%;
 
 				a {
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
+					width: 100%;
+                                        white-space: nowrap;
 					border-bottom: 1px solid #ccc;
+                                        line-height: 2em;
 
 					&:hover,
 					&:focus {}
@@ -112,8 +116,8 @@ NAVIGATION STYLES
 
 		/* showing sub-menus */
 		&:hover > ul {
-			top: auto;
-			visibility:visible;
+                      top: 2em;
+                      visibility:visible;
 		}
 
 	} /* end .menu ul li */
@@ -126,6 +130,42 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+/*! responsive-nav.js 1.0.32 by @viljamis */
+.js .nav-collapse {
+  position: relative;
+  overflow: visible;
+}
+.js .nav-collapse.closed {
+  max-height: none;
+}
+.nav-toggle {
+  display: none;
+}
+
+
+.nav-collapse {
+  float: right; width: auto;
+  margin: 50px 0 40px;
+}
+
+.nav-collapse li {
+  width: auto;
+/*  *width: 24.9%; *//* IE7 Hack *//*
+  _width: 19%; *//* IE6 Hack */
+&:last-child a{border-right: 0;}
+}
+.nav-collapse li a {
+  margin: 0;
+  padding: 0px 1em;
+  float: left;
+  text-align: center;
+  border-bottom: 0;
+  border-right: 1px solid white;
+}
+.nav-collapse ul ul a {
+  display: none;
+}
 
 /*********************
 SIDEBARS & ASIDES

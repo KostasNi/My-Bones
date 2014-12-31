@@ -5,10 +5,6 @@ WP_HEAD GOODNESS
 *********************/
 
 function bones_head_cleanup() {
-	// category feeds
-	// remove_action( 'wp_head', 'feed_links_extra', 3 );
-	// post and comment feeds
-	// remove_action( 'wp_head', 'feed_links', 2 );
 	// EditURI link
 	remove_action( 'wp_head', 'rsd_link' );
 	// windows live writer
@@ -53,10 +49,6 @@ function bones_remove_recent_comments_style() {
 	}
 }
 
-// remove injected CSS from gallery
-function bones_gallery_style($css) {
-	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
-}
 
 
 /*********************
@@ -85,6 +77,7 @@ function bones_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
+	    wp_register_script( 'responsivenav-js', get_stylesheet_directory_uri() . '/library/js/libs/responsive-nav.min.js', array( 'jquery' ),	'1.0.32',	true );
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
@@ -94,6 +87,7 @@ function bones_scripts_and_styles() {
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
+		wp_enqueue_script( 'responsivenav-js' );
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
