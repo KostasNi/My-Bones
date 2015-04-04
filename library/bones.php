@@ -128,6 +128,13 @@ function bones_theme_support() {
 	// wp menus
 	add_theme_support( 'menus' );
 
+	// Enable support for HTML5 markup.
+	add_theme_support( 'html5', array(
+		'comment-list',
+		'search-form',
+		'comment-form'
+	) );
+
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
