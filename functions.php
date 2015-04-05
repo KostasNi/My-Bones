@@ -48,7 +48,7 @@ function bones_ahoy() {
   // ie conditional wrapper
 
   // launching this stuff after theme setup
-  bones_theme_support();
+  add_action( 'after_setup_theme', 'bones_theme_support', 5);
 
   // adding sidebars to Wordpress (these are created in functions.php)
   add_action( 'widgets_init', 'bones_register_sidebars' );
