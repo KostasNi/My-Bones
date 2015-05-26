@@ -170,11 +170,43 @@ function bones_comments( $comment, $args, $depth ) {
 } // don't remove this bracket!
 
 
+/********************* FONTS **********************/
+
 function bones_fonts() {
   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
-
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+
+/* Custom excerpt length and more link
+use: kn_excerpt (30, "Read More"); */
+function kn_excerpt($limit = '55', $more ='') {
+	$post = get_post();
+	if($post->post_excerpt) {
+		$kn_excerpt = wpautop(wp_strip_all_tags(get_the_excerpt()));
+	} else {
+		$kn_excerpt = wpautop( wp_trim_words( get_the_content(), $limit ) );
+	}
+	if ($more != null)
+		$kn_excerpt .= '<a class="read-more" href="' . get_the_permalink() . '" title="Read '.the_title_attribute(array('echo'=>false)).'">' . $more . '</a>';
+
+	return $kn_excerpt;
+}
+
+// Remove allowed HTML box in comments area
+function remove_comment_form_allowed_tags( $defaults ) {
+	$defaults['comment_notes_after'] = '';
+	return $defaults;
+}
+add_filter( 'comment_form_defaults', 'remove_comment_form_allowed_tags' );
+
+// Allow .svg uploads
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

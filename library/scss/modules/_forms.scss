@@ -97,6 +97,7 @@ textarea {
   max-width: 100%;
   min-height: 120px;
   line-height: 1.5em;
+  padding: 12px;
 }
 
 // selects
@@ -120,6 +121,4 @@ select {
 }
 /* IE10+ fix to remove the default arrow */
 select::-ms-expand { display: none; }
-
-input[type="submit"] {padding: 6px 0;}
 

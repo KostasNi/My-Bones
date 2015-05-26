@@ -71,6 +71,7 @@ function bones_scripts_and_styles() {
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'responsivenav-js', get_stylesheet_directory_uri() . '/library/js/libs/responsive-nav.min.js', array('jquery'),	'1.0.32',	true  );
+//	    wp_enqueue_style( 'font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 		wp_enqueue_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true  );
 
 		wp_enqueue_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
