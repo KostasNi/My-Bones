@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
         openPos: "relative",              // String: Position of the opened nav, relative or static
         navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
         navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
-        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        jsClass: "js"                    // String: 'JS enabled' class which is added to <html> element
     });
 
 

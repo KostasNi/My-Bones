@@ -34,3 +34,9 @@ RESPONSIVE HELPER FUNCTION
 @function cp($target, $container) {
   @return calc-percent($target, $container);
 }
+
+/* FONT SIZE FUNCTION */
+$base-font-size: 14px;
+@function em($px, $base: $base-font-size) {
+  @return ( $px / $base ) * 1em;
+}

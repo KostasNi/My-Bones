@@ -85,6 +85,27 @@ textarea,
 
   } // end disabled input
 
+  // placeholder
+  &::-webkit-input-placeholder {
+    font-style: italic;
+    text-transform: lowercase;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    font-style: italic;
+    text-transform: lowercase;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    font-style: italic;
+    text-transform: lowercase;
+  }
+
+  &:-ms-input-placeholder {
+    font-style: italic;
+    text-transform: lowercase;
+  }
+
 } // end input defaults
 
 // spacing out the password (thx @murtaugh)

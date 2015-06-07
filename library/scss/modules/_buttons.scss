@@ -12,7 +12,6 @@ BUTTON DEFAULTS
   font-family: $sans-serif;
   text-decoration: none;
   color: $white;
-  font-size: 0.9em;
   font-size: 34px;
   line-height: 34px;
   font-weight: normal;
@@ -35,7 +34,9 @@ BUTTON DEFAULTS
 
 } // end .button
 
-
+input[type="submit"] {
+  @extend %btn;
+}
 .blue-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $blue;

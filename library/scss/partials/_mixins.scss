@@ -42,3 +42,17 @@ BOX SIZING
 }
 
 
+/* Center Vertically */
+@mixin vertical-align-parent {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 43%;
+  -webkit-transform: translateY(-43%);
+  -ms-transform: translateY(-43%);
+  transform: translateY(-43%);
+}

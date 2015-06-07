@@ -14,7 +14,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 760px;
+    max-width: 760px;
 }
 
 /*********************
@@ -32,7 +32,7 @@ NAVIGATION STYLES
 .nav {
 	border: 0;
 	ul {
-		background:$black;
+		background: $black;
 		margin-top:0;
                 overflow: visible;
 	}
@@ -109,7 +109,8 @@ NAVIGATION STYLES
 			/* highlight sub-menu current page */
 			li.current-menu-item,
 			li.current_page_item,
-			li.current_page_ancestor {
+			li.current_page_ancestor,
+                        li.current-page-ancestor {
 				a {}
 			}
 		}
@@ -131,41 +132,7 @@ NAVIGATION STYLES
 
 } /* end .nav */
 
-/*! responsive-nav.js 1.0.32 by @viljamis */
-.js .nav-collapse {
-  position: relative;
-  overflow: visible;
-}
-.js .nav-collapse.closed {
-  max-height: none;
-}
-.nav-toggle {
-  display: none;
-}
 
-
-.nav-collapse {
-  float: right; width: auto;
-  margin: 50px 0 40px;
-}
-
-.nav-collapse li {
-  width: auto;
-/*  *width: 24.9%; *//* IE7 Hack *//*
-  _width: 19%; *//* IE6 Hack */
-&:last-child a{border-right: 0;}
-}
-.nav-collapse li a {
-  margin: 0;
-  padding: 0px 1em;
-  float: left;
-  text-align: center;
-  border-bottom: 0;
-  border-right: 1px solid white;
-}
-.nav-collapse ul ul a {
-  display: none;
-}
 
 /*********************
 SIDEBARS & ASIDES

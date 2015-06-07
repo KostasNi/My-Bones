@@ -57,6 +57,7 @@ CSS3 GRADIENTS
 BOX SIZING
 *********************/
 /* @include box-sizing(border-box); */
+/* Center Vertically */
 /******************************************************************
 Stylesheet: IE Grid Styles
 ******************************************************************/
@@ -67,7 +68,6 @@ Stylesheet: IE Grid Styles
 
 .d-all {
   float: left;
-  padding-right: 0.75em;
   width: 100%;
   padding-right: 0;
 }
@@ -387,7 +387,7 @@ _width: 19%; */
 
 .nav-collapse li a {
   margin: 0;
-  padding: 0px 1em;
+  padding: 0 1em;
   float: left;
   text-align: center;
   border-bottom: 0;
@@ -464,3 +464,5 @@ you can call the larger styles if you want, but there's really no need
 /******************************************************************
 ADDITIONAL IE FIXES
 ******************************************************************/
+
+/*# sourceMappingURL=ie.css.map */
