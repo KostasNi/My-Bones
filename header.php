@@ -15,17 +15,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 		<?php // icons & favicons ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		<link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/apple-touch-icon.png">
+		<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.png">
 		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+			<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico">
 		<![endif]-->
 		<?php // or, set /favicon.ico for IE10 ?>
 		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+		<meta name="msapplication-TileImage" content="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/win8-tile-icon.png">
         <meta name="theme-color" content="#121212">
 
-		<link rel="pingback" href="<?php bloginfo( 'pingback_url '); ?>">
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   
 		<?php wp_head(); ?>
 	</head>
@@ -38,7 +38,7 @@
 
 				<div id="inner-header" class="wrap cf">
 
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo( 'name' ); ?></a></p>
+					<p id="logo" class="h1"><a href="<?php echo esc_url( home_url() ); ?>" rel="nofollow"><?php bloginfo( 'name' ); ?></a></p>
  
 					<nav role="navigation"> 
 						<?php wp_nav_menu(array(
