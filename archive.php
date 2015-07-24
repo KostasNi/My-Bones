@@ -17,7 +17,7 @@
 
 							<header class="entry-header article-header">
 
-								<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 								<p class="byline entry-meta vcard">
 									<?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
 									/* the time the post was published */
