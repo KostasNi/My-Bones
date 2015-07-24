@@ -6,6 +6,7 @@ Stylesheet: IE Stylesheet
 IMPORTS & DEPENDENCIES
 ******************************************************************/
 
+@import "partials/accessibility";
 @import "partials/variables"; // import variables
 @import "partials/typography"; // import typography
 @import "partials/mixins"; // import mixins
