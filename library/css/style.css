@@ -473,6 +473,36 @@ span.amp {
   font-style: italic;
 }
 
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
 /******************************************************************
 Stylesheet: Variables
 ******************************************************************/
@@ -792,6 +822,189 @@ them however you see fit.
     width: 8.33%;
   }
 }
+/*! responsive-nav.js 1.0.32 by @viljamis */
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-collapse,
+.nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+
+.nav-collapse li {
+  float: left;
+  width: 100%;
+}
+
+.nav-collapse a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding: 0.7em 1em;
+  float: left;
+}
+
+.nav-collapse ul ul a {
+  padding-left: 2em;
+}
+
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+@font-face {
+  font-family: "responsivenav";
+  src: url("../images/icons/responsivenav.eot");
+  src: url("../images/icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../images/icons/responsivenav.ttf") format("truetype"), url("../images/icons/responsivenav.woff") format("woff"), url("../images/icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.nav-toggle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 55px;
+  float: right;
+  margin: 0.75em 0;
+  font-size: 2.5em;
+}
+
+.nav-toggle::before {
+  color: #ffffff;
+  /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-toggle.active::before {
+  font-size: 24px;
+  content: "x";
+}
+
+@media only screen and (min-width: 768px) {
+  /*! responsive-nav.js 1.0.32 by @viljamis */
+  .js .nav-collapse {
+    position: relative;
+    overflow: visible;
+  }
+
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-collapse {
+    float: right;
+    width: auto;
+    margin: 50px 0 40px;
+  }
+
+  .nav-collapse li {
+    width: auto;
+    /*  *width: 24.9%; */
+    /* IE7 Hack */
+                                 /*
+_width: 19%; */
+    /* IE6 Hack */
+  }
+  .nav-collapse li:last-child a {
+    border-right: 0;
+  }
+
+  .nav-collapse li a {
+    margin: 0;
+    padding: 0 1em;
+    float: left;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid white;
+  }
+
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+*********************/
 /*********************
 IMPORTING MODULES
 *********************/
@@ -836,7 +1049,6 @@ input[type="submit"], .blue-btn, .comment-reply-link, #submit {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: white;
-  font-size: 0.9em;
   font-size: 34px;
   line-height: 34px;
   font-weight: normal;
@@ -1127,6 +1339,88 @@ textarea.is-disabled:active,
 .field.is-disabled:active {
   background-color: #d5edf8;
 }
+input[type="text"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+input[type="datetime"]::-webkit-input-placeholder,
+input[type="datetime-local"]::-webkit-input-placeholder,
+input[type="date"]::-webkit-input-placeholder,
+input[type="month"]::-webkit-input-placeholder,
+input[type="time"]::-webkit-input-placeholder,
+input[type="week"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="color"]::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+.field::-webkit-input-placeholder {
+  font-style: italic;
+  text-transform: lowercase;
+}
+input[type="text"]:-moz-placeholder,
+input[type="password"]:-moz-placeholder,
+input[type="datetime"]:-moz-placeholder,
+input[type="datetime-local"]:-moz-placeholder,
+input[type="date"]:-moz-placeholder,
+input[type="month"]:-moz-placeholder,
+input[type="time"]:-moz-placeholder,
+input[type="week"]:-moz-placeholder,
+input[type="number"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="url"]:-moz-placeholder,
+input[type="search"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder,
+input[type="color"]:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder,
+.field:-moz-placeholder {
+  /* Firefox 18- */
+  font-style: italic;
+  text-transform: lowercase;
+}
+input[type="text"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+input[type="datetime"]::-moz-placeholder,
+input[type="datetime-local"]::-moz-placeholder,
+input[type="date"]::-moz-placeholder,
+input[type="month"]::-moz-placeholder,
+input[type="time"]::-moz-placeholder,
+input[type="week"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="url"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="color"]::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder,
+.field::-moz-placeholder {
+  /* Firefox 19+ */
+  font-style: italic;
+  text-transform: lowercase;
+}
+input[type="text"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+input[type="datetime"]:-ms-input-placeholder,
+input[type="datetime-local"]:-ms-input-placeholder,
+input[type="date"]:-ms-input-placeholder,
+input[type="month"]:-ms-input-placeholder,
+input[type="time"]:-ms-input-placeholder,
+input[type="week"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="color"]:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+.field:-ms-input-placeholder {
+  font-style: italic;
+  text-transform: lowercase;
+}
 
 input[type="password"] {
   letter-spacing: 0.3em;
@@ -1231,6 +1525,9 @@ a, a:visited {
 }
 a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: #d10e3c;
+}
+a:focus, a:visited:focus {
+  outline: 1px dotted #f01d4f;
 }
 a:link, a:visited:link {
   /*
@@ -1344,140 +1641,6 @@ and more scalable.
 }
 
 /* end .nav */
-/*! responsive-nav.js 1.0.32 by @viljamis */
-.nav-collapse ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
-  list-style: none;
-}
-
-.nav-collapse li {
-  width: 100%;
-  display: block;
-}
-
-.js .nav-collapse {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-}
-
-.nav-collapse.opened {
-  max-height: 9999px;
-}
-
-.disable-pointer-events {
-  pointer-events: none !important;
-}
-
-.nav-toggle {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-.fixed {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.nav-collapse,
-.nav-collapse * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.nav-collapse,
-.nav-collapse ul {
-  list-style: none;
-  width: 100%;
-  float: left;
-}
-
-.nav-collapse li {
-  float: left;
-  width: 100%;
-}
-
-.nav-collapse a {
-  color: #fff;
-  text-decoration: none;
-  width: 100%;
-  border-bottom: 1px solid white;
-  padding: 0.7em 1em;
-  float: left;
-}
-
-.nav-collapse ul ul a {
-  padding-left: 2em;
-}
-
-/* ------------------------------------------
-  NAV TOGGLE STYLES
---------------------------------------------- */
-@font-face {
-  font-family: "responsivenav";
-  src: url("../images/icons/responsivenav.eot");
-  src: url("../images/icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../images/icons/responsivenav.ttf") format("truetype"), url("../images/icons/responsivenav.woff") format("woff"), url("../images/icons/responsivenav.svg#responsivenav") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-.nav-toggle {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-decoration: none;
-  text-indent: -999px;
-  position: relative;
-  overflow: hidden;
-  width: 70px;
-  height: 55px;
-  float: right;
-  margin: 0.75em 0;
-  font-size: 2.5em;
-}
-
-.nav-toggle:before {
-  color: #ffffff;
-  /* Edit this to change the icon color */
-  font-family: "responsivenav", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  font-size: 28px;
-  text-transform: none;
-  position: absolute;
-  content: "≡";
-  text-indent: 0;
-  text-align: center;
-  line-height: 55px;
-  speak: none;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.nav-toggle.active::before {
-  font-size: 24px;
-  content: "x";
-}
-
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -1688,6 +1851,7 @@ PAGE NAVI STYLES
 .pagination a, .pagination span {
   margin: 0;
   text-decoration: none;
+  padding: 0;
   line-height: 1em;
   font-size: 1em;
   font-weight: normal;
@@ -1988,7 +2152,7 @@ TABLET & SMALLER LAPTOPS
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px;
+    max-width: 760px;
   }
 
   /*********************
@@ -2072,51 +2236,6 @@ TABLET & SMALLER LAPTOPS
   }
 
   /* end .nav */
-  /*! responsive-nav.js 1.0.32 by @viljamis */
-  .js .nav-collapse {
-    position: relative;
-    overflow: visible;
-  }
-
-  .js .nav-collapse.closed {
-    max-height: none;
-  }
-
-  .nav-toggle {
-    display: none;
-  }
-
-  .nav-collapse {
-    float: right;
-    width: auto;
-    margin: 50px 0 40px;
-  }
-
-  .nav-collapse li {
-    width: auto;
-    /*  *width: 24.9%; */
-    /* IE7 Hack */
-                                 /*
-_width: 19%; */
-    /* IE6 Hack */
-  }
-  .nav-collapse li:last-child a {
-    border-right: 0;
-  }
-
-  .nav-collapse li a {
-    margin: 0;
-    padding: 0 1em;
-    float: left;
-    text-align: center;
-    border-bottom: 0;
-    border-right: 1px solid white;
-  }
-
-  .nav-collapse ul ul a {
-    display: none;
-  }
-
   /*********************
   SIDEBARS & ASIDES
   *********************/
@@ -2179,7 +2298,7 @@ DESKTOP
   Stylesheet: Desktop Stylsheet
   ******************************************************************/
   .wrap {
-    width: 1040px;
+    max-width: 1040px;
   }
 }
 /*********************

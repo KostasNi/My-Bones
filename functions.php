@@ -205,7 +205,7 @@ function kn_excerpt( $limit = 55, $more = '' ) {
 		$kn_excerpt = wpautop( wp_trim_words( get_the_content(), $limit ) );
 	}
 	if ( null !== $more ) {
-		$kn_excerpt .= '<a class="read-more" href="' . get_the_permalink() . '" title="Read ' . the_title_attribute( array( 'echo' => false ) ) . '">' . $more . '</a>';
+		$kn_excerpt .= '<a class="read-more" href="' . get_the_permalink() . '" title="Read ' . the_title_attribute( array( 'echo' => false ) ) . '">' . $more . '<span class="screen-reader-text"> of "'.get_the_title( $post->ID ).'</span></a>';
 	}
 
 	return $kn_excerpt;

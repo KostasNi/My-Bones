@@ -78,6 +78,10 @@ a, a:visited {
     color: $link-hover;
   }
 
+    &:focus {
+        outline: 1px dotted $link-color;
+    }
+
   /* on click */
   &:active {
 

@@ -497,7 +497,7 @@ body#tinymce.wp-editor span.amp {
 }
 body#tinymce.wp-editor p {
   -ms-word-wrap: break-word;
-  word-break: break-all;
+  word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;

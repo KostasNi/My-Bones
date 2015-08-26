@@ -4,6 +4,36 @@ Stylesheet: IE Stylesheet
 /******************************************************************
 IMPORTS & DEPENDENCIES
 ******************************************************************/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
 /******************************************************************
 Stylesheet: Variables
 ******************************************************************/
@@ -68,6 +98,7 @@ Stylesheet: IE Grid Styles
 
 .d-all {
   float: left;
+  padding-right: 0.75em;
   width: 100%;
   padding-right: 0;
 }
@@ -269,7 +300,7 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 760px;
+  max-width: 760px;
 }
 
 /*********************
@@ -353,51 +384,6 @@ NAVIGATION STYLES
 }
 
 /* end .nav */
-/*! responsive-nav.js 1.0.32 by @viljamis */
-.js .nav-collapse {
-  position: relative;
-  overflow: visible;
-}
-
-.js .nav-collapse.closed {
-  max-height: none;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-collapse {
-  float: right;
-  width: auto;
-  margin: 50px 0 40px;
-}
-
-.nav-collapse li {
-  width: auto;
-  /*  *width: 24.9%; */
-  /* IE7 Hack */
-                                 /*
-_width: 19%; */
-  /* IE6 Hack */
-}
-.nav-collapse li:last-child a {
-  border-right: 0;
-}
-
-.nav-collapse li a {
-  margin: 0;
-  padding: 0 1em;
-  float: left;
-  text-align: center;
-  border-bottom: 0;
-  border-right: 1px solid white;
-}
-
-.nav-collapse ul ul a {
-  display: none;
-}
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -455,7 +441,7 @@ mobile. Make sure to double check these!
 Stylesheet: Desktop Stylsheet
 ******************************************************************/
 .wrap {
-  width: 1040px;
+  max-width: 1040px;
 }
 
 /*

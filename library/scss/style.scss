@@ -9,6 +9,9 @@ IMPORTING PARTIALS
 // normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
 
+// Accessibility
+@import "partials/accessibility";
+
 // Sass variables
 @import "partials/variables";
 
@@ -24,7 +27,7 @@ IMPORTING PARTIALS
 // the grid
 @import "partials/grid";
 
-// the navigation
+// Responsive navigation
 @import "partials/responsive-nav";
 
 /*********************
